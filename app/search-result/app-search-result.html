@@ -1,0 +1,71 @@
+<!-- <div class="row">
+  <div class="col-md-8 offset-md-2"
+       ng-repeat="currShow in results">
+    <div class="card mb-3"
+         style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src={{currShow.show.image.medium}}
+               class="img-fluid rounded-start"
+               alt="poster of {{currShow.show.name}}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{currShow.show.name}}</h5>
+            <p class="card-text"
+               ng-bind-html="currShow.show.summary">
+            </p>
+            <p class="card-text"><small class="text-muted">{{currShow.show.genres.join("•")}}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row">
+  <h1>Search Results for {{ show }}</h1>
+  <hr>
+  <div class="myCardCollection">
+    <div class="myCard"
+         ng-repeat="currShow in results">
+      <div class="myCardImg">
+        <img src={{currShow.show.image.medium}}
+             alt="poster of {{currShow.show.name}}">
+      </div>
+      <div class="myCardTitle">
+        {{currShow.show.name}}
+      </div>
+      <div class="myCardBody"
+           ng-bind-html="currShow.show.summary.slice(0,135) + ' . . .'">
+      </div>
+      <a href="{{ currShow.show.url }}"
+         target="_blank"
+         class="myCardButton myCardButtonTVMaze">TVMaze</a>
+      <a href="{{ 'https://imdb.com/title/' + currShow.show.externals.imdb }}"
+         target="_blank"
+         class="myCardButton myCardButtonIMDb">IMDb</a>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="col-md-8 offset-md-2">
+    <div class="card mb-3"
+         style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="..."
+               class="img-fluid rounded-start"
+               alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">currShow.show.name</h5><small>genre</small>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->

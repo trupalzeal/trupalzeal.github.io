@@ -1,0 +1,154 @@
+:root{
+  --TVMaze-600: rgb(0, 172, 0);
+  --IMDb-600: rgb(212, 191, 0);
+}
+
+.myCardCollection *{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.myCardCollection {
+  position: static;
+  min-height: 200px;
+}
+
+.myCard{
+  width: 19em;
+  height: 27.5em;
+  border: 1px solid black;
+  border-radius: 0.75em ;
+  margin: 1em 2em;
+  position: relative;
+  overflow: hidden;
+  float: left;
+
+}
+
+.myCard::after{
+  content: '';
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  /* background-color: hsla(0, 0%, 0%, 0.609); */
+  z-index: 10;
+  background: linear-gradient(
+    to top, 
+    hsla(0, 0%, 0%, 1), 
+    hsla(0, 0%, 0%, 0.55) 30%,
+    /* hsla(0, 0%, 0%, 0.35) 55%, */
+    hsla(0, 0%, 0%, 0) 
+    );
+    transition: all 1s;
+}
+
+.myCardTitle{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  text-align: start;
+  padding: .75em 0.5em 0.2em;
+  margin: 0px;
+  position: absolute;
+  bottom: 3%;
+  transition: ease-out 550ms;
+  z-index: 20;
+}
+
+.myCardBody{
+  color: white;
+  margin-top: 1em;
+  padding: 0em 1em;
+  position: absolute;
+  top: calc(200%*1);
+  transition: ease-out 600ms;
+  z-index: 20;
+}
+
+
+.myCardImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.myCardImg img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
+
+
+.myCardButton{
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 8ch;
+  font-weight: 700;
+  box-sizing: border-box;
+  background-color: hsla(0, 0, 0, 0);
+  color: white;
+  padding: .5em .75em;
+  border: 3px solid white;
+  border-radius: 0.4em;
+  margin: 0 0.3em 0.25em;
+  z-index: 20;
+  transition: ease-out 200ms;
+}
+
+
+.myCardButtonTVMaze{
+  position: absolute;
+  bottom: 1%;
+  right: 100em;
+  border-color: var(--TVMaze-600);
+}
+
+.myCardButtonIMDb{
+  position: absolute;
+  bottom: 1%;
+  right: 200em;
+  border-color: var(--IMDb-600);
+}
+
+.myCard:hover>.myCardTitle{
+  bottom: 37%;
+}
+.myCard:hover>.myCardBody{
+  top: 60%;
+}
+.myCard:hover>.myCardButtonTVMaze{
+  right: 0.25em;
+}
+.myCard:hover>.myCardButtonIMDb{
+  right: 6.55em;
+}
+
+.myCard:hover::after{
+  background: linear-gradient(
+    to top, 
+    hsla(0, 0%, 0%, 1), 
+    hsla(0, 0%, 0%, 0.55) 45%,
+    hsla(0, 0%, 0%, 0) 
+    );
+  /* background-color: azure; */
+}
+
+.myCardButton:hover{
+  text-decoration: none;
+  color: black;
+  background-color: white;
+
+}
+
+.myCardButtonTVMaze:hover{
+  background-color: var(--TVMaze-600);
+}
+
+.myCardButtonIMDb:hover{
+  background-color: var(--IMDb-600);
+}
+

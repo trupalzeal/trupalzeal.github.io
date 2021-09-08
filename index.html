@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"
+      ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>WeatherApp</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="/styles/customCards.css">
+  <!-- angularjs -->
+  <script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.8.2/angular-route.min.js"></script>
+  <script src="https://code.angularjs.org/1.8.2/angular-resource.min.js"></script>
+  <script src="https://code.angularjs.org/1.8.2/angular-sanitize.min.js"></script>
+
+  <!-- myscripts -->
+  <script src="/app/app.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="#"
+         class="navbar-brand">TSF</a>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="navbar-item">
+            <a class="nav-link"
+               href="#">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               href="/#!/result">Results</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container"
+       ng-view>
+
+
+  </div>
+  <hr>
+  <!-- <div class="myCardCollection">
+    <div class="myCard">
+      <div class="myCardImg">
+        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/89/224423.jpg"
+             alt="img">
+      </div>
+      <div class="myCardTitle">
+        Card Title
+      </div>
+      <div class="myCardBody">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, non. Dolores molestiae, earum maxime perspiciatis
+        sint eius illo ut autem aut ipsum! Blanditiis pariatur recusandae sit ex mi
+      </div>
+    </div>
+    <div class="myCard">
+      <div class="myCardImg">
+        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/89/224423.jpg"
+             alt="img">
+      </div>
+      <div class="myCardTitle">
+        Card Title
+      </div>
+      <div class="myCardBody">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, non. Dolores molestiae, earum maxime perspiciatis
+        sint eius illo ut autem aut ipsum! Blanditiis pariatur recusandae sit ex mi
+      </div>
+    </div>
+    <div class="myCard">
+      <div class="myCardImg">
+        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/89/224423.jpg"
+             alt="img">
+      </div>
+      <div class="myCardTitle">
+        Card Title
+      </div>
+      <div class="myCardBody">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, non. Dolores molestiae, earum maxime perspiciatis
+        sint eius illo ut autem aut ipsum! Blanditiis pariatur recusandae sit ex mi
+      </div>
+    </div>
+
+  </div> -->
+</body>
+
+</html>
