@@ -168,7 +168,7 @@ myApp.controller('searchResultController', [
 
     foo = 'bar'
 
-    // $scope.results = showAPI.query({ q: $scope.show })
+    $scope.results = showAPI.query({ q: $scope.show })
 
     console.log('$scope.results :>> ', $scope.results);
 
