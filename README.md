@@ -2,8 +2,8 @@
 Hosting Temporary Projects at [GithubPages](https://trupalzeal.github.io)
 ### Current Projects:
   #### 1. TV Show Finder #####
-     - Implements TVMaze API
-     - AngularJS with Routing, Custom Service, Custom Directives and ngResource
+   - Implements TVMaze API
+   - AngularJS with Routing, Custom Service, Custom Directives and ngResource
 
 ## ToDo
  - [ ] Implement changes to house multiple projects
