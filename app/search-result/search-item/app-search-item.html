@@ -1,0 +1,18 @@
+<div class="myCard">
+  <div class="myCardImg">
+    <img src={{aShow.show.image.medium}}
+         alt="poster of {{aShow.show.name}}">
+  </div>
+  <div class="myCardTitle">
+    {{aShow.show.name}}
+  </div>
+  <div class="myCardBody"
+       ng-bind-html="aShow.show.summary.slice(0,135) + ' . . .'">
+  </div>
+  <a href="{{ aShow.show.url }}"
+     target="_blank"
+     class="myCardButton myCardButtonTVMaze">TVMaze</a>
+  <a href="{{ 'https://imdb.com/title/' + aShow.show.externals.imdb }}"
+     target="_blank"
+     class="myCardButton myCardButtonIMDb">IMDb</a>
+</div>

@@ -12,12 +12,15 @@ myApp.config(['$routeProvider', function ($routeProvider) {
       templateUrl: 'app/search-result/app-search-result.html',
       controller: 'searchResultController'
     })
+    .when('/result/:show', {
+      templateUrl: 'app/search-result/app-search-result.html',
+      controller: 'searchResultController'
+    })
 }])
 
 // Services
 myApp.service('showService', function () {
   this.show = 'hanuman'
-
 })
 
 
@@ -37,9 +40,12 @@ myApp.controller('searchController', [
 myApp.controller('searchResultController', [
   '$scope',
   '$resource',
+  '$routeParams',
   'showService',
-  function ($scope, $resource, showService) {
+  function ($scope, $resource, $routeParams, showService) {
     $scope.show = showService.show
+
+    $scope.show = $routeParams.show || showService.show
 
     showAPI = $resource("http://api.tvmaze.com/search/shows",
       // { callback: "JSON_CALLBACK" }, { get: { method: "JSONP" } }
@@ -166,25 +172,6 @@ myApp.controller('searchResultController', [
       }
     ]
 
-    foo = 'bar'
-
     $scope.results = showAPI.query({ q: $scope.show })
 
-    console.log('$scope.results :>> ', $scope.results);
-
-    // $scope.results = JSON.parse($scope.results)
   }])
-
-
-// for (var checkbox in checkboxes)
-//   checkbox.checked = source.checked;
-
-// all_inputs.forEach(element => {
-//   element.checked = true
-// });
-
-// all_inputs = document.getElementsByTagName('input')
-// for (let i = 0; i < all_inputs.length; i++) {
-//   const checkbox = all_inputs[i];
-//   checkbox.click()
-// }

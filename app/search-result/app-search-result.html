@@ -27,25 +27,9 @@
   <h1>Search Results for {{ show }}</h1>
   <hr>
   <div class="myCardCollection">
-    <div class="myCard"
-         ng-repeat="currShow in results">
-      <div class="myCardImg">
-        <img src={{currShow.show.image.medium}}
-             alt="poster of {{currShow.show.name}}">
-      </div>
-      <div class="myCardTitle">
-        {{currShow.show.name}}
-      </div>
-      <div class="myCardBody"
-           ng-bind-html="currShow.show.summary.slice(0,135) + ' . . .'">
-      </div>
-      <a href="{{ currShow.show.url }}"
-         target="_blank"
-         class="myCardButton myCardButtonTVMaze">TVMaze</a>
-      <a href="{{ 'https://imdb.com/title/' + currShow.show.externals.imdb }}"
-         target="_blank"
-         class="myCardButton myCardButtonIMDb">IMDb</a>
-    </div>
+    <app-search-item ng-repeat="currShow in results"
+                     a-show='currShow'>
+    </app-search-item>
   </div>
 </div>
 
