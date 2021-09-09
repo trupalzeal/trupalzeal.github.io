@@ -1,6 +1,6 @@
 :root{
-  --TVMaze-600: rgb(0, 172, 0);
-  --IMDb-600: rgb(212, 191, 0);
+  --TVMaze-600: rgb(60, 148, 139);
+  --IMDb-600: rgb(226, 182, 22);
 }
 
 .myCardCollection *{
@@ -23,7 +23,7 @@
   position: relative;
   overflow: hidden;
   float: left;
-
+  transition: transform 500ms;
 }
 
 .myCard::after{
@@ -96,7 +96,8 @@
   border-radius: 0.4em;
   margin: 0 0.3em 0.25em;
   z-index: 20;
-  transition: ease-out 200ms;
+  transition: all ease-out 800ms;
+  transition: right ease-out 800ms;
 }
 
 
@@ -112,6 +113,10 @@
   bottom: 1%;
   right: 200em;
   border-color: var(--IMDb-600);
+}
+
+.myCard:hover{
+  transform: scale(1.025);
 }
 
 .myCard:hover>.myCardTitle{

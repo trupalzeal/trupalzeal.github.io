@@ -1,14 +1,18 @@
 <div class="row pt-3">
   <div class="col-md-6 offset-md-3">
     <h3 class="form-label">Search Show</h3>
-    <div class="form-group">
-      <input type="text"
-             name="show"
-             id="show"
-             class="form-control"
-             ng-model="show">
-    </div>
-    <a href="/#!/result/{{show}}"
-       class="btn btn-primary">Get Results {{ show? 'for ' + show : ''}}</a>
+    <form ng-submit="submit()">
+      <div class="form-group">
+        <input type="text"
+               name="show"
+               id="show"
+               class="form-control"
+               ng-model="show">
+      </div>
+      <input type="submit"
+             class="btn btn-primary"
+             value="Get Results {{ show ? 'for ' + show : ''}}">
+
+    </form>
   </div>
 </div>
