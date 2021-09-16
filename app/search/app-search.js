@@ -1,7 +1,4 @@
-myApp.controller('searchController', [
-  '$scope',
-  '$location',
-  'showService',
+myApp.controller('searchController', ['$scope', '$location', 'showService',
   function ($scope, $location, showService) {
     $scope.show = showService.show
 
@@ -12,6 +9,7 @@ myApp.controller('searchController', [
     $scope.submit = function () {
       $location.path(`/result/${$scope.show}`)
     }
+
   }]
 )
 

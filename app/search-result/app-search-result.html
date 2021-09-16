@@ -1,55 +1,30 @@
-<!-- <div class="row">
-  <div class="col-md-8 offset-md-2"
-       ng-repeat="currShow in results">
-    <div class="card mb-3"
-         style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src={{currShow.show.image.medium}}
-               class="img-fluid rounded-start"
-               alt="poster of {{currShow.show.name}}">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">{{currShow.show.name}}</h5>
-            <p class="card-text"
-               ng-bind-html="currShow.show.summary">
-            </p>
-            <p class="card-text"><small class="text-muted">{{currShow.show.genres.join("•")}}</small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<div class="row">
+<link rel="stylesheet"
+      href="/styles/customCards.css">
+<div class="container">
   <h1>Search Results for {{ show }}</h1>
   <hr>
-  <div class="myCardCollection">
-    <app-search-item ng-repeat="currShow in results"
-                     a-show='currShow'>
-    </app-search-item>
-  </div>
-</div>
+  <h4>Sort by:
+    <span>
+      <button class="btn btn-outline-primary"
+              ng-click="changeOrderBy('score')">Score</button>
+      <button class="btn btn-outline-secondary"
+              ng-click="changeOrderBy('show.name')">Name</button>
+      <button class="btn btn-outline-success"
+              ng-click="changeOrderBy('show.premiered')">Premiere Date</button>
 
-<!-- <div class="col-md-8 offset-md-2">
-    <div class="card mb-3"
-         style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="..."
-               class="img-fluid rounded-start"
-               alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">currShow.show.name</h5><small>genre</small>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
+    </span>
+  </h4>
+  <hr>
+
+  <div class="row">
+    <div class="myCardCollection">
+      <span class="item-contents"
+            ng-repeat="currShow in results | orderBy:orderByProperty:reverse"
+            ng-animate-ref='{{ currShow.show.id }}'>
+        <app-search-item a-show='currShow'>
+        </app-search-item>
+      </span>
     </div>
-  </div> -->
+  </div>
+
+</div>

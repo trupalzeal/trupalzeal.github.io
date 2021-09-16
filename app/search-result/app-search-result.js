@@ -16,7 +16,7 @@ myApp.controller('searchResultController', [
       {
         "score": 0.45390466,
         "show": {
-          "id": 23794,
+          "id": 23795,
           "url": "https://www.tvmaze.com/shows/23794/the-flip-wilson-show",
           "name": "The Flip Wilson Show",
           "type": "Variety",
@@ -73,11 +73,11 @@ myApp.controller('searchResultController', [
         }
       },
       {
-        "score": 0.45390466,
+        "score": 0.65390466,
         "show": {
           "id": 23794,
           "url": "https://www.tvmaze.com/shows/23794/the-flip-wilson-show",
-          "name": "The Flip Wilson Show",
+          "name": "Flip Wilson Show",
           "type": "Variety",
           "language": "English",
           "genres": [
@@ -87,7 +87,7 @@ myApp.controller('searchResultController', [
           "status": "Ended",
           "runtime": 60,
           "averageRuntime": 60,
-          "premiered": "1970-09-17",
+          "premiered": "1980-09-17",
           "officialSite": null,
           "schedule": {
             "time": "20:00",
@@ -135,4 +135,12 @@ myApp.controller('searchResultController', [
 
     $scope.results = showAPI.query({ q: $scope.show })
 
+    $scope.orderByProperty = 'score'
+    $scope.reverse = true
+
+    $scope.changeOrderBy = function (propertyName) {
+      $scope.orderByProperty = propertyName
+      $scope.reverse = !$scope.reverse
+
+    }
   }])

@@ -13,4 +13,9 @@ myApp.config(['$routeProvider', function ($routeProvider) {
       templateUrl: 'app/search-result/app-search-result.html',
       controller: 'searchResultController'
     })
+    .when('/charts', {
+      templateUrl: 'app/charts/app-charts.html',
+      controller: 'chartsController'
+    })
+    .otherwise('/');
 }])

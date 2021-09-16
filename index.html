@@ -10,26 +10,29 @@
         content="width=device-width, initial-scale=1.0">
   <title>Show Finder App</title>
 
-  <!-- bootstrap -->
+  <!-- Styles -->
   <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
   <link rel="stylesheet"
-        href="/styles/customCards.css">
+        href="/styles/animations.css">
   <!-- angularjs -->
   <script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
   <script src="https://code.angularjs.org/1.8.2/angular-route.min.js"></script>
   <script src="https://code.angularjs.org/1.8.2/angular-resource.min.js"></script>
   <script src="https://code.angularjs.org/1.8.2/angular-sanitize.min.js"></script>
+  <script src="https://code.angularjs.org/1.8.2/angular-animate.min.js"></script>
 
   <!-- myscripts -->
   <script src="/app/app.js"></script>
   <script src="/app/routes.js"></script>
   <script src="/app/services.js"></script>
+  <script src="/app/factories/chart-factory.js"></script>
   <script src="/app/search/app-search.js"></script>
   <script src="/app/search-result/app-search-result.js"></script>
   <script src="/app/search-result/search-item/app-search-item.js"></script>
+  <script src="/app/controllers/charts-controller.js"></script>
 </head>
 
 <body>
@@ -47,12 +50,16 @@
             <a class="nav-link"
                href="/#!/result">Results</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               href="/#!/charts">Charts</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container"
+  <div class="container app-view"
        ng-view>
   </div>
   <div class="container pt-5">

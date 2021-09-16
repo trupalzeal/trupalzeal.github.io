@@ -1,0 +1,22 @@
+{
+  "name": "trupalzeal.github.io",
+  "version": "1.0.0",
+  "description": "Hosting Temporary Projects at [GithubPages](https://trupalzeal.github.io)\r ### Current Projects:\r   #### 1. TV Show Finder #####\r    - Implements TVMaze API\r    - AngularJS with Routing, Custom Service, Custom Directives and ngResource",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trupalzeal/trupalzeal.github.io.git"
+  },
+  "author": "trupalzeal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trupalzeal/trupalzeal.github.io/issues"
+  },
+  "homepage": "https://github.com/trupalzeal/trupalzeal.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.41.0"
+  }
+}
